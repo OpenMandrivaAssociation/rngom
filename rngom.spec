@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 Name: rngom
 Version: 201103
 Release: 0.8.20120119svn.0%{?dist}
@@ -102,3 +102,31 @@ cp -rp target/site/apidocs/* %{buildroot}%{_javadocdir}/%{name}/.
 
 %files javadoc
 %{_javadocdir}/*
+
+
+%changelog
+* Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 201103-0.8.20120119svn
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 201103-0.7.20120119svn
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
+* Wed Feb 06 2013 Java SIG <java-devel@lists.fedoraproject.org> - 201103-0.6.20120119svn
+- Update for https://fedoraproject.org/wiki/Fedora_19_Maven_Rebuild
+- Replace maven BuildRequires with maven-local
+
+* Sat Jul 21 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 201103-0.5.20120119svn
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
+* Thu Feb 23 2012 Juan Hernandez <juan.hernandez@redhat.com> 201103-0.4.20120119svn
+- Make explicit the checked out revision number in the comments
+
+* Sat Feb 18 2012 Juan Hernandez <juan.hernandez@redhat.com> 201103-0.3.20120119svn
+- Remove the binary file lic.jar from the source tarball
+
+* Fri Feb 17 2012 Juan Hernandez <juan.hernandez@redhat.com> 201103-0.2.20120119svn
+- Cleanup of the spec file
+
+* Sat Jan 21 2012 Marek Goldmann <mgoldman@redhat.com> 201103-0.1.20120119svn
+- Initial packaging
+
