@@ -1,8 +1,9 @@
 %{?_javapackages_macros:%_javapackages_macros}
 Name: rngom
 Version: 201103
-Release: 0.8.20120119svn.0%{?dist}
+Release: 0.10.20120119svn.1
 Summary: Java library for parsing RELAX NG grammars
+Group:   Development/Java
 
 License: MIT
 URL: https://rngom.dev.java.net
@@ -20,7 +21,7 @@ BuildRequires: stax2-api
 BuildRequires: javacc
 BuildRequires: javacc-maven-plugin
 BuildRequires: jpackage-utils
-BuildRequires: junit4
+BuildRequires: junit
 BuildRequires: maven-local
 BuildRequires: maven-clean-plugin
 BuildRequires: maven-compiler-plugin
@@ -94,11 +95,7 @@ cp -rp target/site/apidocs/* %{buildroot}%{_javadocdir}/%{name}/.
 %add_maven_depmap JPP-%{name}.pom %{name}.jar
 
 
-%files
-%{_javadir}/%{name}.jar
-%{_mavenpomdir}/*
-%{_mavendepmapfragdir}/*
-
+%files -f .mfiles
 
 %files javadoc
 %{_javadocdir}/*
